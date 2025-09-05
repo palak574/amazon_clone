@@ -24,7 +24,8 @@ This project replicates the design of Amazon's homepage and product listing page
 
 ## 📸 Screenshots
 _Homepage Preview:_  
-![Amazon Clone Screenshot](screenshot.png)  
+![Amazon Clone Screenshot](<img width="1830" height="760" alt="image" src="https://github.com/user-attachments/assets/caa0a23a-f19d-46c6-8b43-10eec8a29820" />
+)  
 *(Add a screenshot of your project here)*  
 
 ---
