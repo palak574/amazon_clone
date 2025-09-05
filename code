@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon.com Clone</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #e3e6e6;
+        }
+        .amazon-gradient-bg {
+            background: linear-gradient(to bottom, #86B6D1, #e3e6e6);
+        }
+        .amazon-header-bg {
+            background-color: #131921;
+        }
+        .amazon-yellow-bg {
+            background-color: #febd69;
+        }
+        .amazon-yellow-text {
+            color: #febd69;
+        }
+        .amazon-link:hover {
+            outline: 1px solid white;
+            border-radius: 3px;
+        }
+        .amazon-button:hover {
+            background-color: #f7a83d;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="amazon-header-bg text-white p-2 flex items-center justify-between flex-wrap sticky top-0 z-50">
+        <!-- Logo and Delivery Address -->
+        <div class="flex items-center space-x-2 flex-shrink-0 mr-4">
+            <a href="#" class="amazon-link p-1.5 flex items-end">
+                <img src="https://static.thenounproject.com/png/1321453-200.png" alt="Amazon Logo" class="w-16 h-auto">
+                <span class="text-xs">.in</span>
+            </a>
+            <a href="#" class="amazon-link p-1.5 hidden md:flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.89a1.5 1.5 0 01-2.122 0l-4.243-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <div class="text-xs">
+                    <p class="text-gray-400">Deliver to</p>
+                    <p class="font-bold">India</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="flex-grow flex items-center rounded-md overflow-hidden mr-4 order-3 w-full mt-2 md:order-2 md:mt-0 md:w-auto">
+            <input type="text" placeholder="Search Amazon.in" class="flex-grow h-10 px-4 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+            <button class="amazon-yellow-bg h-10 px-4 flex items-center justify-center cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Navigation Links and Cart -->
+        <div class="flex items-center space-x-4 flex-shrink-0 order-2 md:order-3">
+            <a href="#" class="amazon-link p-1.5 hidden md:block">
+                <p class="text-xs">Hello, Sign in</p>
+                <p class="font-bold whitespace-nowrap">Account & Lists</p>
+            </a>
+            <a href="#" class="amazon-link p-1.5 hidden md:block">
+                <p class="text-xs">Returns</p>
+                <p class="font-bold">& Orders</p>
+            </a>
+            <a href="#" class="amazon-link p-1.5 flex items-center space-x-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.182 1.748.687 1.748H19a2 2 0 002-2V9a2 2 0 00-2-2h-2.15l-1.5-3.5a2 2 0 00-1.85-1.5H7.72A2 2 0 006 4.5l-1.5 3.5H3z" />
+                </svg>
+                <span class="font-bold text-lg">Cart</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Sub-navigation Bar -->
+    <nav class="amazon-header-bg text-white text-sm p-2 flex items-center space-x-4 overflow-x-auto whitespace-nowrap">
+        <a href="#" class="amazon-link p-1.5 flex items-center space-x-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <p>All</p>
+        </a>
+        <a href="#" class="amazon-link p-1.5">Today's Deals</a>
+        <a href="#" class="amazon-link p-1.5">Customer Service</a>
+        <a href="#" class="amazon-link p-1.5">Mobiles</a>
+        <a href="#" class="amazon-link p-1.5">Electronics</a>
+        <a href="#" class="amazon-link p-1.5">Fashion</a>
+        <a href="#" class="amazon-link p-1.5">Prime</a>
+        <a href="#" class="amazon-link p-1.5 hidden md:block">New Releases</a>
+        <a href="#" class="amazon-link p-1.5 hidden md:block">Books</a>
+        <a href="#" class="amazon-link p-1.5 hidden md:block">Appliances</a>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="w-full">
+        <!-- Hero Section with auto-playing video -->
+        <div class="amazon-gradient-bg">
+            <div class="relative w-full h-80 sm:h-96 overflow-hidden">
+                <video class="w-full h-full object-cover" src="https://assets.mixkit.co/videos/preview/mixkit-women-walking-and-chatting-at-the-airport-4366-large.mp4" autoplay loop muted playsinline></video>
+                <div class="absolute bottom-0 w-full h-24 amazon-gradient-bg"></div>
+            </div>
+        </div>
+
+        <!-- Product Grid Section -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4 -mt-36 relative z-10">
+            <!-- Product Card 1 -->
+            <div class="bg-white p-4 rounded-lg shadow-md flex flex-col justify-between">
+                <h2 class="font-bold text-xl mb-2">Up to 70% off | Deals on Amazon Brands & more</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <a href="#" class="flex flex-col items-center">
+                        <img src="https://placehold.co/120x120/E3E6E6/555?text=Home+Decor" alt="Home Decor" class="w-full rounded-md object-cover mb-1">
+                        <p class="text-sm text-gray-600">Home decor & more</p>
+                    </a>
+                    <a href="#" class="flex flex-col items-center">
+                        <img src="https://placehold.co/120x120/E3E6E6/555?text=Furniture" alt="Furniture" class="w-full rounded-md object-cover mb-1">
+                        <p class="text-sm text-gray-600">Furniture</p>
+                    </a>
+                    <a href="#" class="flex flex-col items-center">
+                        <img src="https://placehold.co/120x120/E3E6E6/555?text=Smart+TVs" alt="Smart TVs" class="w-full rounded-md object-cover mb-1">
+                        <p class="text-sm text-gray-600">Smart TVs</p>
+                    </a>
+                    <a href="#" class="flex flex-col items-center">
+                        <img src="https://placehold.co/120x120/E3E6E6/555?text=Kitchen+Dining" alt="Kitchen & Dining" class="w-full rounded-md object-cover mb-1">
+                        <p class="text-sm text-gray-600">Kitchen & Dining</p>
+                    </a>
+                </div>
+                <a href="#" class="text-sm text-blue-600 mt-4">See all deals</a>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="bg-white p-4 rounded-lg shadow-md flex flex-col justify-between">
+                <h2 class="font-bold text-xl mb-2">Shop & Pay | Earn rewards daily</h2>
+                <img src="https://placehold.co/300x260/E3E6E6/555?text=Rewards+Banner" alt="Rewards Banner" class="w-full rounded-md object-cover mb-4">
+                <a href="#" class="text-sm text-blue-600">See all offers</a>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="bg-white p-4 rounded-lg shadow-md flex flex-col justify-between">
+                <h2 class="font-bold text-xl mb-2">Up to 60% off | Laptops, headphones & more</h2>
+                <img src="https://placehold.co/300x260/E3E6E6/555?text=Laptops+Headphones" alt="Laptops" class="w-full rounded-md object-cover mb-4">
+                <a href="#" class="text-sm text-blue-600">Shop now</a>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div class="bg-white p-4 rounded-lg shadow-md flex flex-col justify-between">
+                <h2 class="font-bold text-xl mb-2">Refresh your home with Amazon Basics</h2>
+                <img src="https://placehold.co/300x260/E3E6E6/555?text=Home+Basics" alt="Electronics" class="w-full rounded-md object-cover mb-4">
+                <a href="#" class="text-sm text-blue-600">Shop now</a>
+            </div>
+        </div>
+
+        <!-- Another Product Section -->
+        <div class="bg-white p-4 rounded-lg shadow-md mx-4 mt-4">
+            <h2 class="font-bold text-xl mb-4">Today's Deals</h2>
+            <div class="flex flex-wrap overflow-x-auto space-x-4 pb-4">
+                <a href="#" class="flex-none w-48 p-2 border border-gray-200 rounded-lg">
+                    <img src="https://placehold.co/200x200/E3E6E6/555?text=Product+1" alt="Product" class="w-full h-auto object-cover rounded-md mb-2">
+                    <p class="text-sm font-semibold">Deal of the day</p>
+                    <p class="text-xs text-red-600">Ends in 2:00:00</p>
+                    <p class="text-lg font-bold">₹499</p>
+                </a>
+                <a href="#" class="flex-none w-48 p-2 border border-gray-200 rounded-lg">
+                    <img src="https://placehold.co/200x200/E3E6E6/555?text=Product+2" alt="Product" class="w-full h-auto object-cover rounded-md mb-2">
+                    <p class="text-sm font-semibold">Up to 50% off</p>
+                    <p class="text-xs text-red-600">Limited time deal</p>
+                    <p class="text-lg font-bold">₹799</p>
+                </a>
+                <a href="#" class="flex-none w-48 p-2 border border-gray-200 rounded-lg">
+                    <img src="https://placehold.co/200x200/E3E6E6/555?text=Product+3" alt="Product" class="w-full h-auto object-cover rounded-md mb-2">
+                    <p class="text-sm font-semibold">Great offers</p>
+                    <p class="text-xs text-red-600">Ends in 3:00:00</p>
+                    <p class="text-lg font-bold">₹999</p>
+                </a>
+                <a href="#" class="flex-none w-48 p-2 border border-gray-200 rounded-lg">
+                    <img src="https://placehold.co/200x200/E3E6E6/555?text=Product+4" alt="Product" class="w-full h-auto object-cover rounded-md mb-2">
+                    <p class="text-sm font-semibold">Special discount</p>
+                    <p class="text-xs text-red-600">Limited time deal</p>
+                    <p class="text-lg font-bold">₹1,299</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#232F3E] text-white mt-8">
+        <!-- Back to top -->
+        <a href="#" class="block bg-[#37475A] hover:bg-[#485769] text-center py-4 text-sm">
+            Back to top
+        </a>
+
+        <!-- Footer links -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-8 text-sm">
+            <div>
+                <h3 class="font-bold mb-2">Get to Know Us</h3>
+                <ul>
+                    <li><a href="#" class="hover:underline">About Us</a></li>
+                    <li><a href="#" class="hover:underline">Careers</a></li>
+                    <li><a href="#" class="hover:underline">Press Releases</a></li>
+                    <li><a href="#" class="hover:underline">Amazon Science</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold mb-2">Connect with Us</h3>
+                <ul>
+                    <li><a href="#" class="hover:underline">Facebook</a></li>
+                    <li><a href="#" class="hover:underline">Twitter</a></li>
+                    <li><a href="#" class="hover:underline">Instagram</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold mb-2">Make Money with Us</h3>
+                <ul>
+                    <li><a href="#" class="hover:underline">Sell on Amazon</a></li>
+                    <li><a href="#" class="hover:underline">Sell under Amazon Accelerator</a></li>
+                    <li><a href="#" class="hover:underline">Protect and Build Your Brand</a></li>
+                    <li><a href="#" class="hover:underline">Amazon Global Selling</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold mb-2">Let Us Help You</h3>
+                <ul>
+                    <li><a href="#" class="hover:underline">COVID-19 and Amazon</a></li>
+                    <li><a href="#" class="hover:underline">Your Account</a></li>
+                    <li><a href="#" class="hover:underline">Returns Centre</a></li>
+                    <li><a href="#" class="hover:underline">100% Purchase Protection</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bg-[#131A22] text-center text-xs py-4">
+            <div class="flex items-center justify-center space-x-2 mb-2">
+                <img src="https://static.thenounproject.com/png/1321453-200.png" alt="Amazon Logo" class="w-16 h-auto">
+                <p>&copy; 1996-2023, Amazon.com, Inc. or its affiliates</p>
+            </div>
+            <div class="flex justify-center space-x-4">
+                <a href="#" class="hover:underline">Conditions of Use</a>
+                <a href="#" class="hover:underline">Privacy Notice</a>
+                <a href="#" class="hover:underline">Your Ads Privacy Choices</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
